@@ -1,0 +1,121 @@
+#gameArea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: white;
+}
+
+#gameBoard {
+    position: relative;
+    float: left;
+    width: 36%;
+    height: 80%;
+    top: 4%;
+    left: 30%;
+}
+
+#board, #numberChoices {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#board tr td, #numberChoices tr td {
+    position: relative;
+    width: 11%;
+    height: 11%;
+    background-color: white;
+}
+
+.cell {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-size: 200%;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    border-color: transparent;
+}
+
+#gameNumberChoices {
+    position: absolute;
+    width: 36%;
+    height: 8.89%;
+    top: 87%;
+    left: 30%;
+}
+
+.number {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-size: 200%;
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+    border-color: transparent;
+}
+
+#game-settings {
+    position: relative;
+    float: right;
+    width: 13%;
+    height: 40%;
+    top: 1%;
+    right: 20%;
+}
+
+#startBtn {
+    position: relative;
+    width: 63%;
+    height: 45%;
+    top: 15%;
+    left: 50%;
+    font-size: 243%;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+#restartBtn {
+    position: relative;
+    width: 63%;
+    height: 45%;
+    top: 17%;
+    left: 50%;
+    font-size: 160%;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+#randomBtn {
+    position: relative;
+    width: 63%;
+    height: 45%;
+    top: 19%;
+    left: 50%;
+    font-size: 138%;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+#solveBtn {
+    position: relative;
+    width: 63%;
+    height: 45%;
+    top: 21%;
+    left: 50%;
+    font-size: 205%;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}

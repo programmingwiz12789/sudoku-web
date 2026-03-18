@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameArea">
+        <div id="gameBoard">
+            <table id="board" border="1">
+                <tr>
+                    <td style="border-top-width:2px; border-left-width:2px">
+                        <button class="cell" id="00" onclick="FillNumber(0, 0)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px">
+                        <button class="cell" id="01" onclick="FillNumber(0, 1)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px">
+                        <button class="cell" id="02" onclick="FillNumber(0, 2)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px; border-left-width:2px">
+                        <button class="cell" id="03" onclick="FillNumber(0, 3)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px">
+                        <button class="cell" id="04" onclick="FillNumber(0, 4)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px">
+                        <button class="cell" id="05" onclick="FillNumber(0, 5)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px; border-left-width:2px">
+                        <button class="cell" id="06" onclick="FillNumber(0, 6)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px">
+                        <button class="cell" id="07" onclick="FillNumber(0, 7)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px; border-right-width:2px">
+                        <button class="cell" id="08" onclick="FillNumber(0, 8)" disabled></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-left-width:2px">
+                        <button class="cell" id="10" onclick="FillNumber(1, 0)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="11" onclick="FillNumber(1, 1)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="12" onclick="FillNumber(1, 2)" disabled></button>
+                    </td>
+                    <td style="border-left-width:2px">
+                        <button class="cell" id="13" onclick="FillNumber(1, 3)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="14" onclick="FillNumber(1, 4)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="15" onclick="FillNumber(1, 5)" disabled></button>
+                    </td>
+                    <td style="border-left-width:2px">
+                        <button class="cell" id="16" onclick="FillNumber(1, 6)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="17" onclick="FillNumber(1, 7)" disabled></button>
+                    </td>
+                    <td style="border-right-width:2px">
+                        <button class="cell" id="18" onclick="FillNumber(1, 8)" disabled></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-left-width:2px">
+                        <button class="cell" id="20" onclick="FillNumber(2, 0)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="21" onclick="FillNumber(2, 1)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="22" onclick="FillNumber(2, 2)" disabled></button>
+                    </td>
+                    <td style="border-left-width:2px">
+                        <button class="cell" id="23" onclick="FillNumber(2, 3)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="24" onclick="FillNumber(2, 4)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="25" onclick="FillNumber(2, 5)" disabled></button>
+                    </td>
+                    <td style="border-left-width:2px">
+                        <button class="cell" id="26" onclick="FillNumber(2, 6)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="27" onclick="FillNumber(2, 7)" disabled></button>
+                    </td>
+                    <td style="border-right-width:2px">
+                        <button class="cell" id="28" onclick="FillNumber(2, 8)" disabled></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-top-width:2px; border-left-width:2px">
+                        <button class="cell" id="30" onclick="FillNumber(3, 0)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px">
+                        <button class="cell" id="31" onclick="FillNumber(3, 1)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px">
+                        <button class="cell" id="32" onclick="FillNumber(3, 2)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px; border-left-width:2px">
+                        <button class="cell" id="33" onclick="FillNumber(3, 3)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px">
+                        <button class="cell" id="34" onclick="FillNumber(3, 4)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px">
+                        <button class="cell" id="35" onclick="FillNumber(3, 5)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px; border-left-width:2px">
+                        <button class="cell" id="36" onclick="FillNumber(3, 6)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px">
+                        <button class="cell" id="37" onclick="FillNumber(3, 7)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px; border-right-width:2px">
+                        <button class="cell" id="38" onclick="FillNumber(3, 8)" disabled></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-left-width:2px">
+                        <button class="cell" id="40" onclick="FillNumber(4, 0)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="41" onclick="FillNumber(4, 1)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="42" onclick="FillNumber(4, 2)" disabled></button>
+                    </td>
+                    <td style="border-left-width:2px">
+                        <button class="cell" id="43" onclick="FillNumber(4, 3)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="44" onclick="FillNumber(4, 4)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="45" onclick="FillNumber(4, 5)" disabled></button>
+                    </td>
+                    <td style="border-left-width:2px">
+                        <button class="cell" id="46" onclick="FillNumber(4, 6)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="47" onclick="FillNumber(4, 7)" disabled></button>
+                    </td>
+                    <td style="border-right-width:2px">
+                        <button class="cell" id="48" onclick="FillNumber(4, 8)" disabled></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-left-width:2px">
+                        <button class="cell" id="50" onclick="FillNumber(5, 0)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="51" onclick="FillNumber(5, 1)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="52" onclick="FillNumber(5, 2)" disabled></button>
+                    </td>
+                    <td style="border-left-width:2px">
+                        <button class="cell" id="53" onclick="FillNumber(5, 3)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="54" onclick="FillNumber(5, 4)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="55" onclick="FillNumber(5, 5)" disabled></button>
+                    </td>
+                    <td style="border-left-width:2px">
+                        <button class="cell" id="56" onclick="FillNumber(5, 6)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="57" onclick="FillNumber(5, 7)" disabled></button>
+                    </td>
+                    <td style="border-right-width:2px">
+                        <button class="cell" id="58" onclick="FillNumber(5, 8)" disabled></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-top-width:2px; border-left-width:2px">
+                        <button class="cell" id="60" onclick="FillNumber(6, 0)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px">
+                        <button class="cell" id="61" onclick="FillNumber(6, 1)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px">
+                        <button class="cell" id="62" onclick="FillNumber(6, 2)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px; border-left-width:2px">
+                        <button class="cell" id="63" onclick="FillNumber(6, 3)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px">
+                        <button class="cell" id="64" onclick="FillNumber(6, 4)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px">
+                        <button class="cell" id="65" onclick="FillNumber(6, 5)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px; border-left-width:2px">
+                        <button class="cell" id="66" onclick="FillNumber(6, 6)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px">
+                        <button class="cell" id="67" onclick="FillNumber(6, 7)" disabled></button>
+                    </td>
+                    <td style="border-top-width:2px; border-right-width:2px">
+                        <button class="cell" id="68" onclick="FillNumber(6, 8)" disabled></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-left-width:2px">
+                        <button class="cell" id="70" onclick="FillNumber(7, 0)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="71" onclick="FillNumber(7, 1)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="72" onclick="FillNumber(7, 2)" disabled></button>
+                    </td>
+                    <td style="border-left-width:2px">
+                        <button class="cell" id="73" onclick="FillNumber(7, 3)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="74" onclick="FillNumber(7, 4)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="75" onclick="FillNumber(7, 5)" disabled></button>
+                    </td>
+                    <td style="border-left-width:2px">
+                        <button class="cell" id="76" onclick="FillNumber(7, 6)" disabled></button>
+                    </td>
+                    <td>
+                        <button class="cell" id="77" onclick="FillNumber(7, 7)" disabled></button>
+                    </td>
+                    <td style="border-right-width:2px">
+                        <button class="cell" id="78" onclick="FillNumber(7, 8)" disabled></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-bottom-width:2px; border-left-width:2px">
+                        <button class="cell" id="80" onclick="FillNumber(8, 0)" disabled></button>
+                    </td>
+                    <td style="border-bottom-width:2px">
+                        <button class="cell" id="81" onclick="FillNumber(8, 1)" disabled></button>
+                    </td>
+                    <td style="border-bottom-width:2px">
+                        <button class="cell" id="82" onclick="FillNumber(8, 2)" disabled></button>
+                    </td>
+                    <td style="border-bottom-width:2px; border-left-width:2px">
+                        <button class="cell" id="83" onclick="FillNumber(8, 3)" disabled></button>
+                    </td>
+                    <td style="border-bottom-width:2px">
+                        <button class="cell" id="84" onclick="FillNumber(8, 4)" disabled></button>
+                    </td>
+                    <td style="border-bottom-width:2px">
+                        <button class="cell" id="85" onclick="FillNumber(8, 5)" disabled></button>
+                    </td>
+                    <td style="border-bottom-width:2px; border-left-width:2px">
+                        <button class="cell" id="86" onclick="FillNumber(8, 6)" disabled></button>
+                    </td>
+                    <td style="border-bottom-width:2px">
+                        <button class="cell" id="87" onclick="FillNumber(8, 7)" disabled></button>
+                    </td>
+                    <td style="border-bottom-width:2px; border-right-width:2px">
+                        <button class="cell" id="88" onclick="FillNumber(8, 8)" disabled></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="gameNumberChoices">
+            <table id="numberChoices" border="1">
+                <tr>
+                    <td style="border-top-width:2px; border-bottom-width:2px; border-left-width:2px">
+                        <button class="number" id="1" onclick="PickNumber(1)" disabled>1</button>
+                    </td>
+                    <td style="border-top-width:2px; border-bottom-width:2px">
+                        <button class="number" id="2" onclick="PickNumber(2)" disabled>2</button>
+                    </td>
+                    <td style="border-top-width:2px; border-bottom-width:2px">
+                        <button class="number" id="3" onclick="PickNumber(3)" disabled>3</button>
+                    </td>
+                    <td style="border-top-width:2px; border-bottom-width:2px">
+                        <button class="number" id="4" onclick="PickNumber(4)" disabled>4</button>
+                    </td>
+                    <td style="border-top-width:2px; border-bottom-width:2px">
+                        <button class="number" id="5" onclick="PickNumber(5)" disabled>5</button>
+                    </td>
+                    <td style="border-top-width:2px; border-bottom-width:2px">
+                        <button class="number" id="6" onclick="PickNumber(6)" disabled>6</button>
+                    </td>
+                    <td style="border-top-width:2px; border-bottom-width:2px">
+                        <button class="number" id="7" onclick="PickNumber(7)" disabled>7</button>
+                    </td>
+                    <td style="border-top-width:2px; border-bottom-width:2px">
+                        <button class="number" id="8" onclick="PickNumber(8)" disabled>8</button>
+                    </td>
+                    <td style="border-top-width:2px; border-bottom-width:2px; border-right-width:2px">
+                        <button class="number" id="9" onclick="PickNumber(9)" disabled>9</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="game-settings">
+            <button id="startBtn" onclick="Start()">Start</button>
+            <button id="restartBtn" onclick="Restart()">Restart</button>
+            <button id="randomBtn" onclick="Random()">Random</button>
+            <button id="solveBtn" onclick="Solve()">Solve</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
